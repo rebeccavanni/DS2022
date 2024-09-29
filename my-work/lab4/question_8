@@ -7,3 +7,6 @@ curl PHOTO_URL > photo.png
 aws s3 cp photo.png s3://ds2022-ecn2wh/
 
 aws s3 presign --expires-in 604800 s3://ds2022-ecn2wh/photo.png
+
+# presigned url =https://ds2022-ecn2wh.s3.amazonaws.com/photo.png?AWSAccessKeyId=AKIA6IY35QTWKVWTQEXT&Signature=TTxo6ylVdBnDjde5A%2F40mhOtiF0%3D&Expires=1728230709
+
