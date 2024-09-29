@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "What is the url of your photo?" PHOTO_URL
+
+curl PHOTO_URL > photo.png
+
+aws s3 cp photo.png s3://ds2022-ecn2wh/
+
+aws s3 presign --expires-in 604800 s3://ds2022-ecn2wh/photo.png
